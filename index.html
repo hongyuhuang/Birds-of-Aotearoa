@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birds Of Aotearoa</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <h1>Birds Of Aotearoa</h1>
+    </header>
+    <div class="sidebar" id="sidebar">
+        <form id="filter-birds">
+            <h2>Filter Birds</h2>
+            <label>Search:</label><input type="text" id="search" autocomplete="off" />
+            <label for="conservation-status">Conservation Status:</label>
+            <select name="conservation-status" id="conservation-status">
+                <option value="all">All</option>
+                <option value="not threatened">Not Threatened</option>
+                <option value="naturally uncommon">Naturally Uncommon</option>
+                <option value="relict">Relict</option>
+                <option value="recovering">Recovering</option>
+                <option value="declining">Declining</option>
+                <option value="nationally increasing">Nationally Increasing</option>
+                <option value="nationally vulnerable">Nationally Vulnerable </option>
+                <option value="nationally endangered">Nationally Endangered</option>
+                <option value="nationally critical">Nationally Critical</option>
+                <option value="extinct">Extinct</option>
+                <option value="data deficient">Data Deficient</option>
+            </select>
+            <label for="sort-by">Sort By:</label>
+            <select name="sort-by" id="sort-by">
+                <option value="default">Default</option>
+                <option value="alphabetical-english">A - Z (English)</option>
+                <option value="alphabetical-maori">A - Z (Maori)</option>
+                <option value="alphabetical-scientific">A - Z (Scientific)</option>
+                <option value="family">Family</option>
+                <option value="order">Order</option>
+                <option value="lighest-heaviest">Lighest to heaviest</option>
+                <option value="heaviest-lighest">Heaviest to lighest</option>
+                <option value="smallest-largest">Smallest to largest</option>
+                <option value="largest-smallest">Largest to smallest</option>
+            </select>
+            <button id="filter-result" type="submit">FILTER RESULT</button>
+            <h2>Conservation Status</h2>
+            <div class="conservation-colours">
+                <div class="colour" style="background-color: #02a028;"></div>
+                <div class="colour" style="background-color: #649a31;"></div>
+                <div class="colour" style="background-color: #99cb68;"></div>
+                <div class="colour" style="background-color: #fecc33;"></div>
+                <div class="colour" style="background-color: #fe9a01;"></div>
+                <div class="colour" style="background-color: #c26967;"></div>
+                <div class="colour" style="background-color: #9b0000;"></div>
+                <div class="colour" style="background-color: #660032;"></div>
+                <div class="colour" style="background-color: #320033;"></div>
+                <div class="colour" style="background-color: black;"></div>
+                <div class="colour" style="background-color: black;"></div>
+            </div>
+            <div class="conservation-text">
+                <p>Not Threatened</p>
+                <p>Naturally Uncommon</p>
+                <p>Relict</p>
+                <p>Recovering</p>
+                <p>Declining</p>
+                <p>Nationally Increasing</p>
+                <p>Nationally Vulnerable</p>
+                <p>Nationally Endangered</p>
+                <p>Nationally Critical</p>
+                <p>Extinct</p>
+                <p>Data Deficient</p>
+            </div>
+            <span>Conservation status from <a href="https://www.doc.govt.nz/">DOC Website</a></span>
+        </form>
+    </div>
+    <main class="listClass">
+    </main>
+    <template id="cardTemplate">
+        <div class="card">
+            <div class="container">
+                <img class="photo">
+                <h2 class="primaryName"></h2>
+                <div class="credit"></div>
+                <div class="conservationColour"></div>
+            </div>
+            <h2 class="englishName"></h2>
+            <div class="card-label">
+                <p>Scientific Name: </p>
+                <p>Family: </p>
+                <p>Order: </p>
+                <p>Status: </p>
+                <p>Length: </p>
+                <p>Weight: </p>
+            </div>
+            <div class="card-txt">
+                <p class="scientificName"></p>
+                <p class="order"></p>
+                <p class="family"></p>
+                <p class="conservationStatus"></p>
+                <p class="length"></p>
+                <p class="weight"></p>
+            </div>
+        </div>
+    </template>
+    <footer>
+        <span>Data licensed from <a href="https://www.birdsnz.org.nz">Birds New Zealand</a> for educational use within
+            the University of Otago </span>
+    </footer>
+</body>
+</html>
