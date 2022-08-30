@@ -1,3 +1,5 @@
+#Birds of Aotearoa
+
 The objective of the project was to create front-end for a web application that browses the NZBirds dataset. 
 
 The website is meant to a single page application that allows the user to search by keyword, filter by conservation status and sort by various categories. 
