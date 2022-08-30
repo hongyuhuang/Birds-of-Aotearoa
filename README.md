@@ -1,4 +1,4 @@
-#Birds of Aotearoa
+# Birds of Aotearoa
 
 The objective of the project was to create front-end for a web application that browses the NZBirds dataset. 
 
